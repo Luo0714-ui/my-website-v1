@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个网站</title>
+
+  <!-- style.css 负责导航、分区布局、颜色和手机端显示 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home">我的第一个网站</a>
+
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        菜单
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <a href="#home">首页</a>
+        <a href="#about">关于这个网站</a>
+        <a href="#composition">网页如何组成</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section home-section" aria-labelledby="welcome-heading">
+      <div class="inner">
+        <p class="kicker">HTML + CSS + JavaScript</p>
+
+        <!-- script.js 会修改这个标题里的文字 -->
+        <h1 id="welcome-heading">你好，世界！</h1>
+        <p class="lead">这是由 HTML 编写、CSS 排版的一段网页文字。</p>
+
+        <button id="change-button" type="button">切换问候语</button>
+        <p id="feedback" class="feedback" aria-live="polite">按钮会把上面的标题换成另一句问候语。</p>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="inner">
+        <p class="kicker">关于这个网站</p>
+        <h2 id="about-title">从一句问候开始</h2>
+        <p class="section-intro">这个网站使用最简单的网页文件制作，用来记录网页技术的学习过程。</p>
+
+        <div class="summary-grid">
+          <article class="info-item">
+            <h3>出发点</h3>
+            <p>先让一页网页能打开、能阅读，再从单页升级成完整网站结构。</p>
+          </article>
+          <article class="info-item">
+            <h3>当前阶段</h3>
+            <p>页面已加入顶部导航、内容分区和手机菜单，可以继续添加自己的内容。</p>
+          </article>
+          <article class="info-item">
+            <h3>下一步</h3>
+            <p>把这里的示例文字替换成自我介绍、作品或学习笔记。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="composition" class="section composition-section" aria-labelledby="composition-title">
+      <div class="inner">
+        <p class="kicker">网页如何组成</p>
+        <h2 id="composition-title">三个文件配合工作</h2>
+        <p class="section-intro">这个网站只使用了三种基本网页文件，每个文件负责一类事情。</p>
+
+        <div class="file-grid">
+          <article class="file-item">
+            <h3>HTML</h3>
+            <p><code>index.html</code> 负责网页内容，例如标题、文字和按钮。</p>
+          </article>
+          <article class="file-item">
+            <h3>CSS</h3>
+            <p><code>style.css</code> 负责网页外观，例如颜色、间距和手机端布局。</p>
+          </article>
+          <article class="file-item">
+            <h3>JavaScript</h3>
+            <p><code>script.js</code> 负责网页交互，例如菜单展开和文字切换。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>用 HTML、CSS 与 JavaScript 制作</p>
+    </div>
+  </footer>
+
+  <!-- script.js 负责交互；放在 body 末尾可确保页面元素先加载 -->
+  <script src="js/script.js"></script>
+</body>
+</html>
